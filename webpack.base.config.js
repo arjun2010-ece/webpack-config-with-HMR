@@ -1,11 +1,11 @@
 const webpack = require("webpack");
 const path = require("path");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+// const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
-    entry: ["react-hot-loader/patch", "./src"],
+    entry: ["react-hot-loader/patch", "./src/index.js"],
     output: {
-        path: path.resolve(__dirname, "dist"),
+        path: path.resolve(__dirname, "src/index.js"),
         filename: "bundle.js"
     },
     module: {
@@ -31,12 +31,7 @@ const config = {
         alias: {
             "react-dom": "@hot-loader/react-dom"
           }
-    },
-    plugins: [
-        new CleanWebpackPlugin({
-            cleanOnceBeforeBuildPatterns: ["dist"]
-          }),
-    ]
+    }
 }
 
 module.exports = config;
