@@ -1,6 +1,6 @@
 const webpack = require("webpack");
 const path = require("path");
-// const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
     entry: ["react-hot-loader/patch", "./src/index.js"],
@@ -31,7 +31,12 @@ const config = {
         alias: {
             "react-dom": "@hot-loader/react-dom"
           }
-    }
+    },
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: "./src/index.html"
+        })
+    ]
 }
 
 module.exports = config;
