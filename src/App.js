@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { hot } from 'react-hot-loader/root';
 import {Navbar} from "./Navbar";
+import WelcomeMessage from "./WelcomeMessage";
+
 
 class App extends Component {
     render() {
@@ -12,6 +14,7 @@ class App extends Component {
             <p>How are you.</p>
           </h1>
           <Navbar />
+          <WelcomeMessage />
         </>
       );
     }
